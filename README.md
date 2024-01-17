@@ -2,7 +2,7 @@
 An improved version of a game I made in the past
 
 # To Play
-Simply go <a href="https://salamandeenie.github.io/Numberdle/Project%20Numberpad%20Delux/index2.html">here</a> and play! No downloading required!
+Simply go <a href="https://salamandeenie.github.io/NumberdleDelux/index2.html">here</a> and play! No downloading required!
 
 # To Download and Play Offline
 - Either download the soure code from the releases section, or press "<>Code" and download zip.
