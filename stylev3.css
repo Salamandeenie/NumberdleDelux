@@ -35,9 +35,11 @@ html {
     bottom: 5%;
     border: 1px solid white;
     width: 90%;
+    max-width: 400px;
     height: 30%;
     align-self: center;
     display: grid;
+    border-radius: 5%;
 }
 
 #func-buttons {
@@ -54,14 +56,14 @@ html {
     height: 3vh;
     width: 17.5%;
     border: white solid 1px;
-    border-radius: 5%;
+    border-radius: 15%;
 }
 
 #button-grid {
     border-spacing: 5px; /* Set the desired spacing between cells */
-    width: 40%;
+    width: 50%;
     height: 50%;
-    transform: translate(30%,-5%);
+    transform: translate(10%,0%);
 }
 
 .button {
