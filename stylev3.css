@@ -30,13 +30,23 @@ html {
     background-color: transparent;
 }
 
+body {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+
 #controller-box {
+    padding: 2%;
     position: fixed;
-    bottom: 5%;
+    bottom: 2.5%;
     border: 1px solid white;
     width: 90%;
-    max-width: 400px;
-    height: 30%;
+    height: 35;
+    max-width: 300px;
     align-self: center;
     display: grid;
     border-radius: 5%;
@@ -49,26 +59,31 @@ html {
     height: 20%;
     margin: 0 auto;
     align-content: center;
+    margin-bottom: 1vh;
 }
 
 .fbutton {
-    margin-top: 5%;
-    height: 3vh;
-    width: 17.5%;
-    border: white solid 1px;
-    border-radius: 15%;
+    height: 2vh;
+    width: 20%;
+    border: solid white 1px;
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 2vh; /* Adjust this value based on the height of your .fbutton */
 }
 
 #button-grid {
     border-spacing: 5px; /* Set the desired spacing between cells */
-    width: 50%;
-    height: 50%;
-    transform: translate(10%,0%);
+    width: 90%;
+    height: 0;
+    margin: 0 auto;
+
 }
 
 .button {
     padding: 5%;
-    width: 30%;
+    width: 15%;
     height: 100%;
     text-align: center;
     vertical-align: middle;
@@ -78,4 +93,44 @@ html {
 .button:hover {
     background-color: white;
     color: black;
+}
+
+#giveUp:hover {
+    background-color: red;
+}
+
+#randGuess:hover {
+    background-image: linear-gradient(to right, red, orange, yellow, lime, cyan);
+    background-size: 300% 100%;
+    animation: rainbowAnimation 2s alternate ease-in-out infinite;
+}
+
+@keyframes rainbowAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+#Reset:hover {
+    background-color: slategrey;
+}
+
+#github:hover {
+    background-color: white;
+    color: black;
+}
+
+#givup:hover {
+    background-color: red;
+}
+
+.genButton {
+    border-bottom: 3px solid whitesmoke;
+}
+.genButton:active {
+    transform: translateY(3px);
+    border-bottom: 1px solid lightgrey;
 }

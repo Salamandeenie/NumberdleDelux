@@ -8,34 +8,47 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+    <div id="segmentedHolder"></div>
   <div id="controller-box">
     <div id="func-buttons">
-        <div id="giveUp" class="fbutton"></div>
-        <div id="randGuess" class="fbutton"></div>
-        <div id="Reset" class="fbutton"></div>
-        <div id="github" class="fbutton"></div>
-        <div id="question" class="fbutton"></div>
+        <div id="giveUp" class="fbutton genButton">X</div>
+        <div id="Reset" class="fbutton genButton">O</div>
+        <div id="randGuess" class="fbutton genButton">?</div>
+        <div id="github" class="fbutton genButton">GITHUB</div>
     </div>
 
     <table id="button-grid">
         <tr>
-            <td class="button">1</td>
-            <td class="button">2</td>
-            <td class="button">3</td>
+            <td class="button genButton">1</td>
+            <td class="button genButton">2</td>
+            <td class="button genButton">3</td>
+            
+            <td class="button genButton" style="visibility: hidden;">no</td>
+
+            <td colspan="2" class="button genButton">Random</td>
         </tr>
         <tr>
-            <td class="button">4</td>
-            <td class="button">5</td>
-            <td class="button">6</td>
+            <td class="button genButton">4</td>
+            <td class="button genButton">5</td>
+            <td class="button genButton">6</td>
+
+            <td class="button genButton" style="visibility: hidden;">no</td>
+
+            <td class="button genButton"><</td>
+            <td class="button genButton">></td>
         </tr>
         <tr>
-            <td class="button">7</td>
-            <td class="button">8</td>
-            <td class="button">9</td>
+            <td class="button genButton">7</td>
+            <td class="button genButton">8</td>
+            <td class="button genButton">9</td>
+
+            <td class="button genButton" style="visibility: hidden;">no</td>
+
+            <td colspan="2" class="button genButton">Enter</td>
         </tr>
         <tr>
-            <td colspan="2" class="button">0</td>
-            <td class="button"><<</td>
+            <td colspan="2" class="button genButton">0</td>
+            <td class="button genButton"><<</td>
         </tr>
     </table>
     
