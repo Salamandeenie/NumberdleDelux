@@ -24,8 +24,9 @@
             <td class="button genButton" onclick="appendAndMove(3)">3</td>
     
             <td class="button genButton" style="visibility: hidden;">no</td>
-    
-            <td colspan="2" class="button genButton" onclick="simulateKeyPress('R', 'KeyR', 82, 82, true)">Random</td>
+            <td class="button genButton" style="visibility: hidden;">no</td>
+            <td class="button genButton" style="visibility: hidden;">no</td>
+
         </tr>
         <tr>
             <td class="button genButton" onclick="appendAndMove(4)">4</td>
@@ -33,9 +34,8 @@
             <td class="button genButton" onclick="appendAndMove(6)">6</td>
     
             <td class="button genButton" style="visibility: hidden;">no</td>
-    
-            <td class="button genButton" onclick="simulateKeyPress('Backspace', 'Backspace', 8, 8, true)">&lt;</td>
-            <td class="button genButton" onclick="simulateKeyPress('ArrowRight', 'ArrowRight', 39, 39, true)">&gt;</td>
+
+            <td colspan="2" class="button genButton" onclick="randGuess()">Random</td>
         </tr>
         <tr>
             <td class="button genButton" onclick="appendAndMove(7)">7</td>
@@ -44,7 +44,7 @@
     
             <td class="button genButton" style="visibility: hidden;">no</td>
     
-            <td colspan="2" class="button genButton" onclick="simulateKeyPress('Enter', 'Enter', 13, 13, true)">Enter</td>
+            <td colspan="2" class="button genButton" onclick="handleEnterKey('Enter')">Enter</td>
         </tr>
         <tr>
             <td colspan="2" class="button genButton" onclick="appendAndMove(0)">0</td>

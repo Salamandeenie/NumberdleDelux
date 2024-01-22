@@ -352,7 +352,7 @@
 
         // Handles the enterkey. When enter is pressed, it tells the readInput function to do its thing.
         function handleEnterKey(e){
-            if (e.key === 'Enter' && !isWinGame) {
+            if ((e.key === 'Enter' && !isWinGame) || (e === "Enter" && !isWinGame)) {
                 let data = readInput("groupID" + turnTracker);
                 data = autoGreen("groupID" + (turnTracker), data);
                 const colorGrades = colorGrade(data, answerGenerated);
