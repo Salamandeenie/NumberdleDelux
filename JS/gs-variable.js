@@ -30,6 +30,9 @@
     // The clock time when the page is loaded. Used by the timer functions
     var startTime = new Date().getTime();
 
+    // The Current Focused input
+    let currentFocus;
+
     // These functions just nab refrences for the placeholders
     const timerPlaceholder = document.getElementById('timerPlaceholder');
     const guessPlaceholder = document.getElementById('guessPlaceholder'); 

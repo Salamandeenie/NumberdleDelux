@@ -1,14 +1,12 @@
 // gameScriptV2
 document.addEventListener("DOMContentLoaded", function (){
-
     generateSegmentedInput((slotDifficultyNumber));
-    startTimer();
+    //startTimer();
     generateAnswer();
     updateGuessCounter();
 
-    findChildFromParentID("groupID" + turnTracker, 0).focus();
+    currentFocus = findChildFromParentID("groupID" + turnTracker, 0)
     document.getElementById( "groupID" + turnTracker ).scrollIntoView();
 
-    // console.log(answerGenerated);
-
+    //MasterEar();
 });

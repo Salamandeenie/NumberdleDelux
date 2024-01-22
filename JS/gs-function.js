@@ -1,7 +1,7 @@
 // gameScriptV2Functions 
 
     // Timer functions
-    {
+  /*  {
         // This function starts the updateTimer function by giving it the starting time
         function startTimer(){
             timerInterval = setInterval(updateTimer, 1000);
@@ -26,7 +26,7 @@
                 timerInterval = null;
             }
         }
-    }
+    } */
 
     // Guess functions
     {
@@ -80,7 +80,7 @@
             groupDiv.id = "groupID" + turnTracker;
             
             for ( let i = 0; i < slots; i++ )
-            {
+            { 
                 const input = document.createElement('input');
                 input.maxLength = 2;
 
@@ -192,15 +192,15 @@
         function getColorCode(colorGrade){
             switch (colorGrade) {
                 case 'Green':
-                    return '6ca965';
+                    return '00ff59';
                 case 'Yellow':
-                    return 'c8b653';
+                    return 'eedc4a';
                 case 'Purple':
-                    return 'b04bd3';
+                    return 'c9229e';
                 case 'Blue':
-                    return '4f4ba3';
+                    return '00c4ff';
                 case 'Red':
-                    return 'a34b52';
+                    return 'ff0600';
                 default:
                     return '787c7f';
             }  
@@ -310,13 +310,13 @@
                 const inputs = group.querySelectorAll('input');
                 inputs.forEach((input, index) => {
                     const colorCode = getColorCode(colorGrades[index]);
-                    input.style.backgroundColor = '#' + colorCode;
+                    input.style.color = '#' + colorCode;
 
                     // Use darkenColor to create a shadow
-                    const shadowColor = darkenColor(colorCode, 9010); // Def value: 9010
+                    const shadowColor = darkenColor(colorCode, 0); // Def value: 9010
 
                     // Set the boxShadow property on the input element
-                    input.style.boxShadow = '0 5px 0 0px #' + shadowColor;
+                  //  input.style.boxShadow = '0 5px 0 0px #' + shadowColor;
                 }); 
             }
         }
@@ -361,6 +361,7 @@
                 isWin(data, answerGenerated);
                 generateSegmentedInput(slotDifficultyNumber, "groupID" + turnTracker);
                 if (!isWinGame){
+                    currentFocus = findChildFromParentID("groupID" + turnTracker, 0);
                     findChildFromParentID("groupID" + turnTracker, 0).focus();
                     document.getElementById( "groupID" + turnTracker ).scrollIntoView();
 
@@ -472,6 +473,28 @@
                 for ( let i = 0; i < data.length; i++ )
                 {
                     findChildFromParentID("groupID" + (turnTracker -1), i).placeholder = forceInput[i]; // Nab the answer value, and redraw it to the screen. Slam Bam.
+                }
+            }
+        }
+
+        // Function to append a number to the current input and move to the next if needed
+        function appendAndMove(number) {
+            if (currentFocus) {
+                const value = currentFocus.value;
+
+                if (value.length < 2) {
+                    // If the current input is not full, append the number
+                    currentFocus.value = value + number;
+                }
+
+                // Check if the current input is now full
+                if (currentFocus.value.length === 2) {
+                    // Move to the next input
+                    const nextInput = currentFocus.nextElementSibling;
+                    if (nextInput) {
+                        nextInput.focus();
+                        currentFocus = nextInput;
+                    }
                 }
             }
         }
